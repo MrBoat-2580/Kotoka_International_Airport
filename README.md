@@ -6,6 +6,6 @@
 3. Pinto Clifford Tetteh    22439653
 
 # GitHub Usernames (Respectively)
-Mr. Boat 2580
-Nadia-Ibrahim-Olabimpe
-Stranger
+1. Mr. Boat 2580
+2. Nadia-Ibrahim-Olabimpe
+3. Stranger
