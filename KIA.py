@@ -27,7 +27,11 @@ while True:
         if luggage < 0:
             print("Invalid Number of Bags")
         count=1
+        
         total_charge1=0
+        total_charge2=0
+        total_charge3=0
+        total_charge=total_charge3+total_charge2+total_charge1
         total_weight=0
         for i in range(1,luggage+1):
             weight= int(input(f"Enter Weight of Bag {count}: "))
@@ -41,7 +45,26 @@ while True:
                 charge_1= 30*extra
                 print(f"Extra Charge for Bag {i} is {charge_1}")
                 total_charge1 += charge_1
-        print(f"Total Cost for all extra luggage is {total_charge1}")
+                print(f"Total Cost for all extra luggage is {total_charge1}")
+            elif  ticket_class == 2 and weight > 23:
+                print(f"Bag {i} exceeds the allowable limit")
+                print("Allowed is 23kg and Ghs30 for Each Extra Kg")
+                allowed_2= 23
+                extra= weight-allowed_2
+                charge_2= 30*extra
+                print(f"Extra Charge for Bag {i} is {charge_2}")
+                total_charge2 += charge_2
+                print(f"Total Cost for all extra luggage is {total_charge2}")
+            elif  ticket_class == 3 and weight > 32:
+                print(f"Bag {i} exceeds the allowable limit")
+                print("Allowed is 40kg and Ghs30 for Each Extra Kg")
+                allowed_3= 32
+                extra= weight-allowed_3
+                charge_3= 30*extra
+                print(f"Extra Charge for Bag {i} is {charge_3}")
+                total_charge3 += charge_3
+                print(f"Total Cost for all extra luggage is {total_charge3}")
+
         print(" ")
 
         print("====PASSENGER ELIGIBILITY=====")
@@ -83,7 +106,7 @@ while True:
         passenger_details["DESTINATION"]=destination
         passenger_details["BOARDING CLASS"]=ticket_class
         passenger_details["NUMBER OF BAGS"]=luggage
-        passenger_details["TOTAL EXTRA LUGGAGE COST"]=total_charge1
+        passenger_details["TOTAL EXTRA LUGGAGE COST"]=total_charge
         passenger_details["TOTAL LUGGAGE WEIGHT"]=total_weight
         passenger_details["SECURITY STATUS"]=security_status
         passenger_details["ElIGIBILITY TO BOARD"]=eligibility_to_board
